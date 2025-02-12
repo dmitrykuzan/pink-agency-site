@@ -8,6 +8,12 @@ const Page = () => {
       <Head>
         <title>Pink Agency</title>
         <meta name="description" content="description" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:image" content="" />
+
+        <meta property="og:url" content="" />
+        <link rel="icon" href="img/ui/favicon.svg" />
       </Head>
       <Home />
     </>

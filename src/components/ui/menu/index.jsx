@@ -4,7 +4,7 @@ import { MENU } from "@utils";
 import { useRouter } from "next/router";
 
 export const Menu = (props) => {
-  const { className } = props;
+  const { className, onClose } = props;
 
   const t = useTranslation();
 
@@ -20,7 +20,11 @@ export const Menu = (props) => {
               router.pathname === value ? "active" : ""
             }`}
           >
-            <Link className={`menu__item-link stack center `} href={value}>
+            <Link
+              className={`menu__item-link stack center `}
+              href={value}
+              onClick={onClose}
+            >
               {t.navigation[key]}
             </Link>
           </li>

@@ -67,6 +67,13 @@
       text-align: center;
       color: var(--clr-default-100);
       background-color: var(--clr-accent-text);
+      transition: background-color var(--transition);
+
+      @media (hover) {
+        &:hover {
+          background-color: var(--clr-hover-600);
+        }
+      }
 
       @media (max-width: em(575)) {
         width: 100%;
@@ -82,7 +89,7 @@
       gap: 2.6rem;
       margin-right: initial;
       padding-top: 2.6rem;
-      padding-bottom: 15rem;
+      padding-bottom: 8rem;
       max-width: initial;
     }
   }

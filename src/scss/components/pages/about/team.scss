@@ -66,4 +66,8 @@
       height: 3rem;
     }
   }
+
+  @media (max-width: em(1080)) {
+    padding-bottom: 6rem;
+  }
 }

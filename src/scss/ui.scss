@@ -19,12 +19,20 @@
   text-align: center;
   color: var(--clr-accent-text);
   background-color: var(--clr-accent-400);
+  transition: background-color var(--transition);
+
+  @media (hover) {
+    &:hover {
+      background-color: var(--clr-hover-400);
+    }
+  }
 }
 
 .input {
   overflow: hidden;
   border: 0.1rem solid var(--clr-accent-400);
   border-radius: 0.5rem;
+  transition: border var(--transition);
 
   input {
     outline: none;
@@ -40,7 +48,6 @@
   }
 
   &:focus-within {
-    border: 0.1rem solid var(--clr-accent-400);
-    transition: border var(--transition);
+    border: 0.1rem solid var(--clr-hover-500);
   }
 }

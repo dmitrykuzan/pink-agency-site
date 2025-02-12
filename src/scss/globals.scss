@@ -39,7 +39,18 @@ $containerWidth: 123rem;
   --clr-accent-500: #fff2f4;
   --clr-accent-text: #563d41;
 
+  --clr-hover-400: #ffa4b5;
+  --clr-hover-500: #ff5c7a;
+  --clr-hover-600: #6b5256;
+  --clr-hover-600: #fce2e6;
+
   --clr-shadow-100: 45px 45px 141px 0px rgba(97, 97, 97, 0.05),
+    181px 181px 250px 0px rgba(97, 97, 97, 0.04),
+    407px 407px 250px 0px rgba(97, 97, 97, 0.03),
+    723px 723px 250px 0px rgba(97, 97, 97, 0.01),
+    1130px 1130px 250px 0px rgba(97, 97, 97, 0);
+
+  --clr-shadow-200: 45px 45px 141px 0px rgba(97, 97, 97, 0.05),
     181px 181px 250px 0px rgba(97, 97, 97, 0.04),
     407px 407px 250px 0px rgba(97, 97, 97, 0.03),
     723px 723px 250px 0px rgba(97, 97, 97, 0.01),

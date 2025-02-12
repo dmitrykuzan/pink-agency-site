@@ -75,6 +75,10 @@
       color: var(--clr-accent-text);
       background-color: var(--clr-accent-400);
     }
+
+    @media (max-width: em(767)) {
+      min-width: 12rem;
+    }
   }
 
   &__body {
@@ -97,6 +101,7 @@
       overflow: hidden;
       border: 0.1rem solid var(--clr-accent-400);
       border-radius: 0.5rem;
+      transition: border var(--transition);
 
       input {
         outline: none;
@@ -112,8 +117,7 @@
       }
 
       &:focus-within {
-        border: 0.1rem solid var(--clr-accent-400);
-        transition: border var(--transition);
+        border: 0.1rem solid var(--clr-hover-500);
       }
     }
   }
@@ -125,6 +129,7 @@
       overflow: hidden;
       border: 0.1rem solid var(--clr-accent-400);
       border-radius: 0.5rem;
+      transition: border var(--transition);
 
       textarea {
         outline: none;
@@ -144,8 +149,7 @@
       }
 
       &:focus-within {
-        border: 0.1rem solid var(--clr-accent-400);
-        transition: border var(--transition);
+        border: 0.1rem solid var(--clr-hover-500);
       }
     }
   }
@@ -160,6 +164,13 @@
     font-size: 2.4rem;
     color: var(--clr-accent-text);
     background-color: var(--clr-accent-400);
+    transition: background-color var(--transition);
+
+    @media (hover) {
+      &:hover {
+        background-color: var(--clr-hover-400);
+      }
+    }
   }
 
   &__image {
@@ -191,6 +202,7 @@
   }
 
   @media (max-width: em(1023)) {
+    padding-top: 12rem;
     padding-bottom: initial;
   }
 }

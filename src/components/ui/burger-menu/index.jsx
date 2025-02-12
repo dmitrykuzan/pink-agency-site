@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 import { Logo, Menu } from "@components/ui";
 import { useOnClickOutside } from "@hooks";
@@ -10,6 +10,11 @@ export const BurgerMenu = (props) => {
   const ref = useRef();
 
   useOnClickOutside(ref, onClose);
+
+  const handleCloseMenu = () => {
+    setModalLoginActive(true);
+    onClose();
+  };
 
   return (
     <div

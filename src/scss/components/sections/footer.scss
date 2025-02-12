@@ -65,6 +65,17 @@
     flex-direction: column;
     gap: 0.7rem;
 
+    a {
+      width: max-content;
+      transition: color var(--transition);
+
+      @media (hover) {
+        &:hover {
+          color: var(--clr-hover-400);
+        }
+      }
+    }
+
     &-mobile {
       display: none;
 
@@ -124,6 +135,13 @@
 
     a {
       color: var(--clr-accent-400);
+      transition: color var(--transition);
+
+      @media (hover) {
+        &:hover {
+          color: var(--clr-hover-400);
+        }
+      }
     }
 
     @media (max-width: em(767)) {

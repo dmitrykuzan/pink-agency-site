@@ -1,6 +1,7 @@
 .services {
   position: relative;
   z-index: 1;
+  overflow-x: clip;
   padding-top: 9.5rem;
 
   &__wrapper {
@@ -12,9 +13,24 @@
   }
 
   &__list {
+    position: relative;
     display: grid;
     gap: 3rem;
     grid-template-columns: repeat(4, 1fr);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 89rem;
+      bottom: -8rem;
+      z-index: -1;
+      display: none;
+      width: 55.5rem;
+      height: 28.8rem;
+      background-image: url("/img/hero/hero-decor-1.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
 
     @media (max-width: em(1360)) {
       gap: 2rem;
@@ -117,11 +133,22 @@
 
   &.home-services {
     padding-top: initial;
+
     .services__title {
       text-align: start;
 
       @media (max-width: em(767)) {
         text-align: center;
+      }
+    }
+
+    .services__list {
+      &::before {
+        display: block;
+
+        @media (max-width: em(1300)) {
+          display: none;
+        }
       }
     }
   }

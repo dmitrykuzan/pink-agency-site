@@ -33,13 +33,28 @@
     a {
       gap: 1.9rem;
       text-transform: uppercase;
+      transition: color var(--transition);
     }
 
     &-icon {
       border-radius: 0.5rem;
       width: 6.2rem;
       height: 6.2rem;
+      box-shadow: var(--clr-shadow-200);
       background-color: var(--clr-accent-500);
+      transition: background-color var(--transition);
+    }
+
+    @media (hover) {
+      &:hover {
+        .contact-form__link-icon {
+          background-color: var(--clr-hover-600);
+        }
+
+        a {
+          color: var(--clr-default-900);
+        }
+      }
     }
   }
 
@@ -52,7 +67,15 @@
       border-radius: 0.5rem;
       width: 6.2rem;
       height: 6.2rem;
+      box-shadow: var(--clr-shadow-200);
       background-color: var(--clr-accent-500);
+      transition: background-color var(--transition);
+
+      @media (hover) {
+        &:hover {
+          background-color: var(--clr-hover-600);
+        }
+      }
     }
   }
 
@@ -106,5 +129,9 @@
     &-text {
       font-size: 1.2rem;
     }
+  }
+
+  @media (max-width: em(992)) {
+    padding-top: 8rem;
   }
 }
