@@ -1,0 +1,32 @@
+.menu {
+  &__list {
+    gap: 2.8rem;
+  }
+
+  &__item {
+    position: relative;
+
+    &-link {
+      font-family: Manrope, sans-serif;
+      color: var(--clr-default-440);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -0.4rem;
+      width: 0;
+      height: 0.2rem;
+      background-color: var(--clr-accent-400);
+      transition: width var(--transition);
+    }
+
+    @media (hover) {
+      &:hover::before {
+        width: 60%;
+        transition: width var(--transition);
+      }
+    }
+  }
+}

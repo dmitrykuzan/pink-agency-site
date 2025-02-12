@@ -1,0 +1,23 @@
+.header {
+  padding-top: 2.9rem;
+
+  &__wrapper {
+    gap: 2rem;
+  }
+
+  &__navigation {
+    gap: 3rem;
+  }
+
+  &__menu {
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+
+  &__button {
+    @media (max-width: em(992)) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.hero {
+  overflow-x: clip;
+
+  &__wrapper {
+    position: relative;
+    padding-top: 18rem;
+    padding-bottom: 15rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 28rem;
+      bottom: -19rem;
+      z-index: 0;
+      width: 55.5rem;
+      height: 28.8rem;
+      background-image: url("/img/hero/hero-decor-1.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(767)) {
+        left: 7rem;
+        bottom: -29rem;
+        z-index: -1;
+      }
+    }
+
+    @media (max-width: em(1023)) {
+      padding-top: 47rem;
+    }
+  }
+
+  &__info {
+    position: relative;
+    gap: 2.8rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: -23rem;
+      bottom: 0rem;
+      z-index: -1;
+      width: 55.5rem;
+      height: 28.8rem;
+      background-image: url("/img/hero/hero-decor-1.svg");
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(1480)) {
+        display: none;
+      }
+    }
+  }
+
+  &__text {
+    gap: 0.8rem;
+    max-width: 67.5rem;
+
+    @media (max-width: em(1280)) {
+      max-width: 55rem;
+    }
+
+    @media (max-width: em(1023)) {
+      max-width: initial;
+    }
+  }
+
+  &__title {
+    font-size: fluid(4.4rem, 2rem);
+    line-height: 150%;
+    color: var(--clr-accent-text);
+  }
+
+  &__description {
+    font-size: fluid(2rem, 1.6rem);
+    line-height: 150%;
+    color: var(--clr-default-430);
+  }
+
+  &__button {
+    max-width: 21.5rem;
+  }
+
+  &__image {
+    position: absolute;
+    right: -2rem;
+    top: 5rem;
+    z-index: -1;
+    width: 66.5rem;
+
+    @media (max-width: em(1023)) {
+      display: none;
+    }
+  }
+
+  &__image-mobile {
+    position: absolute;
+    z-index: -1;
+    display: none;
+    width: 44rem;
+
+    @media (max-width: em(1023)) {
+      left: 50%;
+      right: initial;
+      top: 0;
+      display: block;
+      transform: translateX(-50%);
+    }
+  }
+}

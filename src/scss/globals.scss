@@ -1,0 +1,153 @@
+// ФУНКЦИИ====================================================================
+@import "./settings/functions";
+
+// </ФУНКЦИИ>=================================================================
+
+// <Подключаем шрифты>========================================================
+@import "./settings/fonts";
+
+// </Подключаем шрифты>=======================================================
+
+// <ОБНУЛЕНИЕ>================================================================
+@import "./settings/normalize";
+
+// </ОБНУЛЕНИЕ>===============================================================
+
+// <ПЕРЕМЕННЫЕ>===============================================================
+$containerWidth: 120rem;
+
+:root {
+  // Base
+  --font-family: "Poppins", sans-serif;
+  --font-weight: 400;
+  --content-width: 117rem;
+  --container-offset: 1.5rem;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --transition: 0.3s;
+
+  // Colors
+  --clr-default-100: #fff;
+  --clr-default-200: #fffbfc;
+  --clr-default-400: #5e5e5e;
+  --clr-default-420: #656565;
+  --clr-default-430: #474747;
+  --clr-default-440: #3a3a3a;
+  --clr-default-500: rgba(0, 0, 0, 0.25);
+  --clr-default-900: #000000;
+
+  --clr-accent-400: #ffbfcb;
+  --clr-accent-text: #563d41;
+
+  --clr-shadow-100: 45px 45px 141px 0px rgba(97, 97, 97, 0.05),
+    181px 181px 250px 0px rgba(97, 97, 97, 0.04),
+    407px 407px 250px 0px rgba(97, 97, 97, 0.03),
+    723px 723px 250px 0px rgba(97, 97, 97, 0.01),
+    1130px 1130px 250px 0px rgba(97, 97, 97, 0);
+}
+
+// </ПЕРЕМЕННЫЕ>==============================================================
+
+// <ОБОЛОЧКИ>================================================================
+body {
+  font-size: 1.6rem;
+  color: var(--clr-default-420);
+  background-color: var(--clr-default-200);
+
+  &.lock {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    -ms-touch-action: none;
+    touch-action: none;
+    overscroll-behavior: none;
+
+    .header {
+      overflow: initial;
+    }
+
+    .wrapper {
+      &::before {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: initial;
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 32rem;
+  min-height: 100%;
+
+  &.no-overflow {
+    overflow: initial;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background-color: var(--clr-default-500);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition), visibility var(--transition);
+    pointer-events: none;
+    backdrop-filter: blur(0.5rem);
+  }
+}
+
+// </ОБОЛОЧКИ>===============================================================
+
+// <СТИЛИ>===================================================================
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--container-offset);
+  padding-left: var(--container-offset);
+  width: 100%;
+  max-width: var(--container-width);
+}
+
+// Components - UI
+@import "./ui";
+@import "./stack";
+@import "./components/ui/typography";
+@import "./components/ui/menu";
+@import "./components/ui/burger";
+@import "./components/ui/burger-menu";
+// Components - UI
+
+// Components - Cards
+// Components - Cards
+
+// Components - Sections
+@import "./components/sections/header";
+@import "./components/sections/services";
+@import "./components/sections/footer";
+// Components - Sections
+
+// Components - Common
+// Components - Common
+
+// Components - Pages
+@import "./components/pages/home/hero";
+@import "./components/pages/home/form";
+
+@import "./components/pages/services/banner";
+
+@import "./components/pages/about/about-us";
+@import "./components/pages/about/team";
+// Components - Pages

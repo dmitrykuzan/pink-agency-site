@@ -1,0 +1,69 @@
+.team {
+  padding-top: 9.5rem;
+  padding-bottom: 10.5rem;
+
+  &__wrapper {
+    gap: 4rem;
+  }
+
+  &__text {
+    gap: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 53.8rem;
+  }
+
+  &__title {
+    font-size: 3.4rem;
+    line-height: 150%;
+    color: var(--clr-accent-text);
+  }
+
+  &__description {
+    line-height: 150%;
+    color: var(--clr-accent-text);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 3.2rem;
+
+    @media (max-width: em(1080)) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    gap: 1rem;
+
+    &-info {
+      gap: 2.3rem;
+    }
+
+    &-text {
+      gap: 1rem;
+    }
+
+    &-image {
+      img {
+        border-radius: 0.5rem;
+      }
+    }
+
+    &-name {
+      font-size: 2.4rem;
+      line-height: 150%;
+      color: var(--clr-accent-text);
+    }
+
+    &-socials {
+      gap: 1.2rem;
+    }
+
+    &-social {
+      width: 3rem;
+      height: 3rem;
+    }
+  }
+}

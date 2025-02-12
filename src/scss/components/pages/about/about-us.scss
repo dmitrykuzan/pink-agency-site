@@ -1,0 +1,43 @@
+.about-us {
+  overflow-x: clip;
+  padding-top: 12rem;
+
+  &__wrapper {
+    position: relative;
+    gap: 1.5rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 81rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 63rem;
+      bottom: -15rem;
+      z-index: -1;
+      width: 55.5rem;
+      height: 28.8rem;
+      background-image: url(/img/hero/hero-decor-1.svg);
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      @media (max-width: em(992)) {
+        left: 21rem;
+        bottom: -25rem;
+      }
+    }
+  }
+
+  &__title {
+    line-height: 150%;
+  }
+
+  &__description {
+    font-size: fluid(2rem, 1.6rem);
+    line-height: 150%;
+
+    span {
+      color: var(--clr-accent-400);
+    }
+  }
+}

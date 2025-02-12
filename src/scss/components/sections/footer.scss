@@ -1,0 +1,138 @@
+.footer {
+  padding-top: 3.5rem;
+  padding-bottom: 5.6rem;
+  background-color: var(--clr-default-100);
+
+  &__top {
+    gap: 1rem;
+    border-bottom: 0.1rem solid var(--clr-default-400);
+    padding-bottom: 3.5rem;
+
+    @media (max-width: em(1080)) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media (max-width: em(767)) {
+      gap: 4rem;
+    }
+
+    @media (max-width: em(375)) {
+      gap: 2rem;
+    }
+  }
+
+  &__info {
+    gap: 3rem;
+    max-width: 18rem;
+
+    &-text {
+      font-size: 1.6rem;
+      line-height: 150%;
+      color: var(--clr-accent-text);
+
+      @media (max-width: em(1080)) {
+        text-align: center;
+      }
+    }
+
+    @media (max-width: em(1080)) {
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+
+  &__menu {
+    .menu__list {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.7rem;
+
+      @media (max-width: em(1080)) {
+        flex-direction: row;
+        gap: 2.8rem;
+      }
+
+      @media (max-width: em(375)) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.7rem;
+      }
+    }
+  }
+
+  &__policy {
+    flex-direction: column;
+    gap: 0.7rem;
+
+    &-mobile {
+      display: none;
+
+      @media (max-width: em(767)) {
+        display: flex;
+        padding-top: 1rem;
+      }
+    }
+
+    @media (max-width: em(1080)) {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    @media (max-width: em(767)) {
+      display: none;
+    }
+  }
+
+  &__socials {
+    gap: 1.4rem;
+  }
+
+  &__form {
+    gap: 1rem;
+
+    &-body {
+      gap: 1.6rem;
+
+      @media (max-width: em(375)) {
+        flex-direction: column;
+      }
+    }
+
+    &-input {
+      input {
+        height: 5.6rem;
+      }
+
+      @media (max-width: em(375)) {
+        width: 100%;
+      }
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 1.8rem;
+      line-height: 150%;
+      color: var(--clr-accent-text);
+    }
+  }
+
+  &__designed {
+    padding-top: 1.4rem;
+    text-align: center;
+    color: var(--clr-default-440);
+
+    a {
+      color: var(--clr-accent-400);
+    }
+
+    @media (max-width: em(767)) {
+      display: none;
+    }
+  }
+
+  @media (max-width: em(1080)) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
