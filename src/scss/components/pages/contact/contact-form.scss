@@ -1,0 +1,110 @@
+.contact-form {
+  padding-top: 11.3rem;
+  padding-bottom: 6.7rem;
+
+  &__wrapper {
+    gap: 2rem;
+
+    @media (max-width: em(992)) {
+      flex-direction: column;
+      gap: 6.3rem;
+    }
+  }
+
+  &__info {
+    gap: 3.6rem;
+  }
+
+  &__title {
+    font-size: 4.8rem;
+    line-height: 150%;
+    color: var(--clr-accent-text);
+  }
+
+  &__info-body {
+    gap: 2rem;
+  }
+
+  &__links {
+    gap: 2rem;
+  }
+
+  &__link {
+    a {
+      gap: 1.9rem;
+      text-transform: uppercase;
+    }
+
+    &-icon {
+      border-radius: 0.5rem;
+      width: 6.2rem;
+      height: 6.2rem;
+      background-color: var(--clr-accent-500);
+    }
+  }
+
+  &__socials {
+    gap: 1rem;
+  }
+
+  &__social {
+    &-icon {
+      border-radius: 0.5rem;
+      width: 6.2rem;
+      height: 6.2rem;
+      background-color: var(--clr-accent-500);
+    }
+  }
+
+  &__form {
+    gap: 2rem;
+  }
+
+  &__body {
+    border-radius: 0.5rem;
+    padding-top: 3.4rem;
+    padding-right: 3.4rem;
+    padding-bottom: 3.2rem;
+    padding-left: 3.4rem;
+    width: 100%;
+    max-width: 61.6rem;
+    background-color: var(--clr-default-100);
+
+    &-wrapper {
+      gap: 2.5rem;
+    }
+
+    &-title {
+      max-width: 36.3rem;
+      font-size: 2.4rem;
+      line-height: 150%;
+      color: var(--clr-accent-text);
+    }
+
+    &-fields {
+      gap: 1.2rem;
+    }
+
+    @media (max-width: em(992)) {
+      padding-top: 2rem;
+      padding-right: 2rem;
+      padding-bottom: 2rem;
+      padding-left: 2rem;
+      max-width: initial;
+    }
+  }
+
+  &__submit {
+    min-height: 6.7rem;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  &__bottom {
+    gap: 1.4rem;
+
+    &-text {
+      font-size: 1.2rem;
+    }
+  }
+}

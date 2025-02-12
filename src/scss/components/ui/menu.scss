@@ -1,6 +1,6 @@
 .menu {
   &__list {
-    gap: 2.8rem;
+    gap: 2.5rem;
   }
 
   &__item {
@@ -20,6 +20,13 @@
       height: 0.2rem;
       background-color: var(--clr-accent-400);
       transition: width var(--transition);
+    }
+
+    &.active {
+      &::before {
+        width: 60%;
+        transition: width var(--transition);
+      }
     }
 
     @media (hover) {

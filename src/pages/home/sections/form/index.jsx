@@ -8,7 +8,7 @@ export const Form = () => {
           <div className="form__content stack column">
             <div className="form__info stack column">
               <div className="form__text stack column">
-                <Typography className="form__title" tag="h2">
+                <Typography className="form__title" weight="700" tag="h2">
                   WANT TO JOIN THE PINK TEAM?
                 </Typography>
                 <Typography className="form__description" tag="p">
