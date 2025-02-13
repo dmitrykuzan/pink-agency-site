@@ -21,7 +21,11 @@ export const Header = () => {
             <Logo src="img/ui/logo.svg" />
             <div className="header__navigation stack align-center">
               <Menu className="header__menu" />
-              <a href="#form" className="header__button button-pink">
+              <a
+                href="#form"
+                className="header__button button-pink"
+                aria-label="Go to form"
+              >
                 Apply
               </a>
               <Burger openMenu={openMenu} isMenuOpen={isMenuOpen} />

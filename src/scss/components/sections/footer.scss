@@ -67,6 +67,7 @@
 
     a {
       width: max-content;
+      font-family: Manrope, sans-serif;
       transition: color var(--transition);
 
       @media (hover) {
@@ -172,6 +173,7 @@
 
   &__designed {
     padding-top: 1.4rem;
+    font-family: Manrope, sans-serif;
     text-align: center;
     color: var(--clr-default-440);
 

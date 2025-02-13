@@ -16,6 +16,7 @@ export const ContactForm = () => {
                   <a
                     href="mailto:info@pinkagency.com"
                     className="stack align-center"
+                    aria-label="Send email"
                   >
                     <span className="contact-form__link-icon stack center">
                       <svg
@@ -63,6 +64,7 @@ export const ContactForm = () => {
                   <a
                     className="contact-form__social-icon stack center"
                     href="#"
+                    aria-label="Go to FB"
                   >
                     <svg
                       width="33"
@@ -85,6 +87,7 @@ export const ContactForm = () => {
                   <a
                     className="contact-form__social-icon stack center"
                     href="#"
+                    aria-label="Go to TikTok"
                   >
                     <svg
                       width="33"
@@ -115,6 +118,7 @@ export const ContactForm = () => {
                   <a
                     className="contact-form__social-icon stack center"
                     href="#"
+                    aria-label="Go to LinkedIn"
                   >
                     <svg
                       width="33"
@@ -137,6 +141,7 @@ export const ContactForm = () => {
                   <a
                     className="contact-form__social-icon stack center"
                     href="#"
+                    aria-label="Go to Instagram"
                   >
                     <svg
                       width="33"
@@ -225,7 +230,10 @@ export const ContactForm = () => {
                 </div>
 
                 <div className="contact-form__bottom stack column">
-                  <button className="contact-form__submit button-pink">
+                  <button
+                    className="contact-form__submit button-pink"
+                    aria-label="Contact form submit"
+                  >
                     Apply now
                   </button>
 

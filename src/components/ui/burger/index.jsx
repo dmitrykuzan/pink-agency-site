@@ -10,7 +10,12 @@ export const Burger = ({ openMenu, isMenuOpen }) => {
   }, [isMenuOpen]);
 
   return (
-    <button type="button" onClick={openMenu} className="burger">
+    <button
+      type="button"
+      onClick={openMenu}
+      className="burger"
+      aria-label="Open burger menu"
+    >
       <span></span>
     </button>
   );

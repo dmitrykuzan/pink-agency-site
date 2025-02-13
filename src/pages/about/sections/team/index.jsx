@@ -37,7 +37,7 @@ export const Team = () => {
 
                 <ul className="team__item-socials stack align-center">
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Tik tok">
                       <svg
                         width="30"
                         height="30"
@@ -62,7 +62,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to LinkedIn">
                       <svg
                         width="30"
                         height="30"
@@ -80,7 +80,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Instagram">
                       <svg
                         width="30"
                         height="30"
@@ -128,7 +128,7 @@ export const Team = () => {
 
                 <ul className="team__item-socials stack align-center">
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Tik tok">
                       <svg
                         width="30"
                         height="30"
@@ -153,7 +153,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to LinkedIn">
                       <svg
                         width="30"
                         height="30"
@@ -171,7 +171,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Instagram">
                       <svg
                         width="30"
                         height="30"
@@ -219,7 +219,7 @@ export const Team = () => {
 
                 <ul className="team__item-socials stack align-center">
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Tik tok">
                       <svg
                         width="30"
                         height="30"
@@ -244,7 +244,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to LinkedIn">
                       <svg
                         width="30"
                         height="30"
@@ -262,7 +262,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Instagram">
                       <svg
                         width="30"
                         height="30"
@@ -307,10 +307,9 @@ export const Team = () => {
                     PR manager
                   </Typography>
                 </div>
-
                 <ul className="team__item-socials stack align-center">
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Tik tok">
                       <svg
                         width="30"
                         height="30"
@@ -335,7 +334,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to LinkedIn">
                       <svg
                         width="30"
                         height="30"
@@ -353,7 +352,7 @@ export const Team = () => {
                   </li>
 
                   <li className="team__item-social">
-                    <a href="#">
+                    <a href="#" aria-label="Go to Instagram">
                       <svg
                         width="30"
                         height="30"

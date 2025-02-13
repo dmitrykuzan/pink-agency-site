@@ -19,7 +19,9 @@ export const Banner = () => {
               <div className="input banner__info-input">
                 <input placeholder="Enter your e-mail" type="email" />
               </div>
-              <button className="banner__info-button">Apply now</button>
+              <button className="banner__info-button" aria-label="Apply submit">
+                Apply now
+              </button>
             </form>
           </div>
 

@@ -13,6 +13,7 @@ export const Footer = () => {
                   src="img/ui/logo-footer.svg"
                   width="153"
                   height="80"
+                  loading="lazy"
                   alt="Footer logo"
                 />
               </Link>
@@ -30,7 +31,11 @@ export const Footer = () => {
 
             <ul className="footer__socials stack align-center">
               <li className="footer__social">
-                <a className="stack center" href="#">
+                <a
+                  className="stack center"
+                  href="#"
+                  aria-label="Social icon link"
+                >
                   <svg
                     width="31"
                     height="31"
@@ -43,7 +48,11 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="footer__social">
-                <a className="stack center" href="#">
+                <a
+                  className="stack center"
+                  href="#"
+                  aria-label="Social icon link"
+                >
                   <svg
                     width="33"
                     height="33"
@@ -76,7 +85,9 @@ export const Footer = () => {
                 <div className="input footer__form-input">
                   <input placeholder="Enter your e-mail" type="email" />
                 </div>
-                <button className="button-pink">Apply</button>
+                <button className="button-pink" aria-label="Apply submit">
+                  Apply
+                </button>
               </div>
             </form>
           </div>

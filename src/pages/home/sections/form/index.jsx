@@ -77,8 +77,12 @@ export const Form = () => {
                 custom={3}
                 suppressHydrationWarning={true}
               >
-                <button className="form__button active">Models</button>
-                <button className="form__button">Brands</button>
+                <button className="form__button active" aria-label="Models tab">
+                  Models
+                </button>
+                <button className="form__button" aria-label="Brands tab">
+                  Brands
+                </button>
               </motion.div>
             </div>
 

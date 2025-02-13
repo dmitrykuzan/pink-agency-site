@@ -25,7 +25,11 @@ export const BurgerMenu = (props) => {
     >
       <div className="burger__menu-wrapper stack column">
         <div className="burger__menu-header stack column">
-          <button className="burger__menu-close" onClick={onClose}></button>
+          <button
+            className="burger__menu-close"
+            onClick={onClose}
+            aria-label="Close burger menu"
+          ></button>
           <Logo className="burger__menu-logo" src="/img/ui/logo.svg" />
         </div>
         <div className="burger__menu-list">
