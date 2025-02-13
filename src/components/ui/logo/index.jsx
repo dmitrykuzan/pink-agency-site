@@ -11,7 +11,7 @@ export const Logo = (props) => {
 
   return (
     <div className={logoClassName}>
-      <Link href="/">
+      <Link href="/" aria-label="Go Home Page">
         <img src={src} width="152" height="56" alt="" loading="eager" />
       </Link>
     </div>

@@ -73,6 +73,7 @@ export const Hero = () => {
             <motion.a
               href="#form"
               className="hero__button button-pink"
+              aria-label="Go to form"
               variants={buttonAnim}
               custom={3}
               suppressHydrationWarning={true}
