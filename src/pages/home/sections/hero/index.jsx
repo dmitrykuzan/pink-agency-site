@@ -45,14 +45,21 @@ export const Hero = () => {
             </button>
           </div>
           <div className="hero__image">
-            <img src="img/hero/hero.png" width="665" height="957" alt="Girl" />
+            <img
+              src="img/hero/hero.webp"
+              width="665"
+              height="957"
+              alt="Girl"
+              loading="eager"
+            />
           </div>
 
           <div className="hero__image-mobile">
             <img
-              src="img/hero/hero-mobile.png"
+              src="img/hero/hero-mobile.webp"
               width="440"
               height="794"
+              loading="eager"
               alt="Girl"
             />
           </div>

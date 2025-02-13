@@ -79,7 +79,7 @@ export const Form = () => {
                     <textarea
                       placeholder="Intagram, SnapChat, TikTok"
                       name="form__textarea"
-                      id=""
+                      id="form__textarea"
                     ></textarea>
                   </div>
                 </div>

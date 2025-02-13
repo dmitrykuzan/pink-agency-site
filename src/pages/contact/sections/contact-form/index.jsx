@@ -214,7 +214,7 @@ export const ContactForm = () => {
                       <textarea
                         placeholder="enter your message"
                         name="contact-form-textarea"
-                        id=""
+                        id="contact-form-textarea"
                       ></textarea>
                     </div>
                   </div>
