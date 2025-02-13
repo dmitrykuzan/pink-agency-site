@@ -115,6 +115,23 @@ main {
   }
 }
 
+// Custom Scrollbar Styles
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 0.3rem;
+  width: 0.6rem;
+  background-color: var(--clr-hover-400);
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.2);
+}
+
 // </ОБОЛОЧКИ>===============================================================
 
 // <СТИЛИ>===================================================================
