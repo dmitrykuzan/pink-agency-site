@@ -168,7 +168,11 @@ export const ContactForm = () => {
 
           <div className="contact-form__body">
             <div className="contact-form__body-wrapper stack column">
-              <Typography className="contact-form__body-title" weight="700">
+              <Typography
+                className="contact-form__body-title"
+                weight="700"
+                tag="h3"
+              >
                 Ready to transform your presence?
               </Typography>
               <form className="contact-form__form stack column">

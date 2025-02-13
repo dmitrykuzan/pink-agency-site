@@ -99,6 +99,48 @@
     gap: 1.4rem;
   }
 
+  &__social {
+    a {
+      svg {
+        transition: fill var(--transition), stroke var(--transition);
+      }
+    }
+
+    &:first-child {
+      a {
+        svg {
+          fill: var(--clr-accent-400);
+        }
+      }
+
+      @media (hover) {
+        &:hover {
+          a {
+            svg {
+              fill: var(--clr-hover-400);
+            }
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      a {
+        svg {
+          stroke: var(--clr-accent-400);
+        }
+      }
+
+      @media (hover) {
+        &:hover {
+          svg {
+            stroke: var(--clr-hover-400);
+          }
+        }
+      }
+    }
+  }
+
   &__form {
     gap: 1rem;
 

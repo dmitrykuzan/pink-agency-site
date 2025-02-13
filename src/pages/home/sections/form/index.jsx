@@ -1,25 +1,85 @@
 import { Container, Typography } from "@components/ui";
+import { motion } from "framer-motion";
 
 export const Form = () => {
+  // title anim
+  let titleAnim = {};
+  let buttonAnim = {};
+
+  if (typeof window !== "undefined") {
+    const isMobile = window.innerWidth < 992;
+
+    if (!isMobile) {
+      titleAnim = {
+        hidden: { x: -20, opacity: 0 },
+        visible: (custom) => ({
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: custom * 0.3,
+            duration: 0.8,
+            ease: "easeOut",
+          },
+        }),
+      };
+
+      buttonAnim = {
+        hidden: {
+          opacity: 0,
+        },
+        visible: (custom) => ({
+          opacity: 1,
+
+          transition: {
+            delay: custom * 0.3,
+            duration: 0.8,
+          },
+        }),
+      };
+    }
+  }
+
   return (
-    <section className="form" id="form">
+    <motion.section
+      className="form"
+      id="form"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.2, once: true }}
+      suppressHydrationWarning={true}
+    >
       <Container>
         <div className="form__wrapper stack">
           <div className="form__content stack column">
             <div className="form__info stack column">
               <div className="form__text stack column">
-                <Typography className="form__title" weight="700" tag="h2">
+                <motion.h2
+                  className="form__title"
+                  custom={1}
+                  variants={titleAnim}
+                  suppressHydrationWarning={true}
+                >
                   WANT TO JOIN THE PINK TEAM?
-                </Typography>
-                <Typography className="form__description" tag="p">
+                </motion.h2>
+                <motion.p
+                  className="form__description"
+                  custom={2}
+                  variants={titleAnim}
+                  suppressHydrationWarning={true}
+                >
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt.
-                </Typography>
+                </motion.p>
               </div>
-              <div className="form__buttons stack align-center">
+              <motion.div
+                className="form__buttons stack align-center"
+                variants={buttonAnim}
+                custom={3}
+                suppressHydrationWarning={true}
+              >
                 <button className="form__button active">Models</button>
                 <button className="form__button">Brands</button>
-              </div>
+              </motion.div>
             </div>
 
             <form className="form__body stack column">
@@ -104,10 +164,16 @@ export const Form = () => {
           </div>
 
           <div className="form__image">
-            <img src="img/form/form.jpg" width="762" height="1084" alt="Girl" />
+            <img
+              src="img/form/form.webp"
+              width="762"
+              height="1084"
+              loading="lazy"
+              alt="Girl"
+            />
           </div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };

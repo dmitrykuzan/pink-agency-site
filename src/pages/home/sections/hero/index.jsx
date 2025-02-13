@@ -1,25 +1,82 @@
-import { Container, Typography } from "@components/ui";
-import { useTranslation } from "@hooks";
+import { Container } from "@components/ui";
+import { motion } from "framer-motion";
 
 export const Hero = () => {
-  const t = useTranslation();
+  // title anim
+  let titleAnim = {};
+  let buttonAnim = {};
+
+  if (typeof window !== "undefined") {
+    const isMobile = window.innerWidth < 992;
+
+    if (!isMobile) {
+      titleAnim = {
+        hidden: { x: -20, opacity: 0 },
+        visible: (custom) => ({
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: custom * 0.3,
+            duration: 0.8,
+            ease: "easeOut",
+          },
+        }),
+      };
+
+      buttonAnim = {
+        hidden: {
+          opacity: 0,
+        },
+        visible: (custom) => ({
+          opacity: 1,
+
+          transition: {
+            delay: custom * 0.3,
+            duration: 0.8,
+          },
+        }),
+      };
+    }
+  }
 
   return (
-    <section className="hero">
+    <motion.section
+      className="hero"
+      initial="hidden"
+      animate="visible"
+      viewport={{ once: true }}
+      suppressHydrationWarning={true}
+    >
       <Container>
         <div className="hero__wrapper stack">
           <div className="hero__info stack column">
             <div className="hero__text stack column">
-              <Typography className="hero__title" weight="600" tag="h1">
+              <motion.h1
+                className="hero__title"
+                custom={1}
+                variants={titleAnim}
+                suppressHydrationWarning={true}
+              >
                 Empowering creators Building digital <br></br> Icons
                 transforming presence
-              </Typography>
-              <Typography className="hero__description" tag="p">
+              </motion.h1>
+              <motion.p
+                className="hero__description"
+                custom={2}
+                variants={titleAnim}
+                suppressHydrationWarning={true}
+              >
                 We help creators grow their brands, maximize revenue, and
                 protect their digital presence
-              </Typography>
+              </motion.p>
             </div>
-            <a href="#form" className="hero__button button-pink">
+            <motion.a
+              href="#form"
+              className="hero__button button-pink"
+              variants={buttonAnim}
+              custom={3}
+              suppressHydrationWarning={true}
+            >
               <span className="hero__button-text">Apply now</span>
               <span className="hero__button-icon">
                 <svg
@@ -42,7 +99,7 @@ export const Hero = () => {
                   </defs>
                 </svg>
               </span>
-            </a>
+            </motion.a>
           </div>
           <div className="hero__image">
             <img
@@ -65,6 +122,6 @@ export const Hero = () => {
           </div>
         </div>
       </Container>
-    </section>
+    </motion.section>
   );
 };

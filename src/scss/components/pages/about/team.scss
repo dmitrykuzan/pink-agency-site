@@ -64,6 +64,60 @@
     &-social {
       width: 3rem;
       height: 3rem;
+
+      a {
+        svg {
+          transition: stroke var(--transition), fill var(--transition);
+        }
+      }
+
+      &:nth-child(1) {
+        a {
+          svg {
+            stroke: var(--clr-accent-400);
+          }
+
+          @media (hover) {
+            &:hover {
+              svg {
+                stroke: var(--clr-hover-400);
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        a {
+          svg {
+            fill: var(--clr-accent-400);
+          }
+
+          @media (hover) {
+            &:hover {
+              svg {
+                fill: var(--clr-hover-400);
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        a {
+          svg {
+            stroke: var(--clr-accent-400);
+          }
+
+          @media (hover) {
+            &:hover {
+              svg {
+                stroke: var(--clr-hover-400);
+              }
+            }
+          }
+        }
+      }
     }
   }
 
