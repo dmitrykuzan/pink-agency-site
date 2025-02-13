@@ -2,7 +2,7 @@ import { Container, Typography } from "@components/ui";
 
 export const Form = () => {
   return (
-    <section className="form">
+    <section className="form" id="form">
       <Container>
         <div className="form__wrapper stack">
           <div className="form__content stack column">

@@ -19,7 +19,7 @@ export const Hero = () => {
                 protect their digital presence
               </Typography>
             </div>
-            <button className="hero__button button-pink">
+            <a href="#form" className="hero__button button-pink">
               <span className="hero__button-text">Apply now</span>
               <span className="hero__button-icon">
                 <svg
@@ -42,7 +42,7 @@ export const Hero = () => {
                   </defs>
                 </svg>
               </span>
-            </button>
+            </a>
           </div>
           <div className="hero__image">
             <img
