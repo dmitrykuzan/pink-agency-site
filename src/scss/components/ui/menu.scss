@@ -8,7 +8,8 @@
 
     &-link {
       font-family: Manrope, sans-serif;
-      color: var(--clr-default-440);
+      font-size: 1.8rem;
+      color: var(--clr-default-900);
     }
 
     &::before {
@@ -18,7 +19,7 @@
       bottom: -0.4rem;
       width: 0;
       height: 0.2rem;
-      background-color: var(--clr-accent-400);
+      background-color: var(--clr-default-100);
       transition: width var(--transition);
     }
 

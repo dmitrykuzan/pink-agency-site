@@ -5,9 +5,24 @@ export const Header = () => {
   //** Sticky header
   const [isSticky, setIsSticky] = useState(false);
 
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1100);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    const sticky = isMobile ? 200 : 10;
+
     const handleScroll = () => {
-      if (window.pageYOffset > 200) {
+      if (window.pageYOffset > sticky) {
         setIsSticky(true);
       } else {
         setIsSticky(false);

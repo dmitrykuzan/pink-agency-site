@@ -112,7 +112,7 @@ export const Hero = () => {
                 style={{ y, opacity }}
                 suppressHydrationWarning={true}
               >
-                Your All-Access Pass to Creative Excellence
+                Your All-Access Pass to Creative Excellence.
               </motion.h1>
             </div>
 
