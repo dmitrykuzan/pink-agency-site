@@ -57,7 +57,8 @@ $containerWidth: 123rem;
 body {
   font-size: 1.6rem;
   color: var(--clr-default-420);
-  background-color: var(--clr-default-200);
+  // background-color: var(--clr-default-200);
+  background-color: var(--clr-default-100);
 
   &.lock {
     overflow: hidden;
@@ -149,6 +150,7 @@ main {
 @import "./stack";
 @import "./components/ui/typography";
 @import "./components/ui/menu";
+@import "./components/ui/logo";
 @import "./components/ui/burger";
 @import "./components/ui/burger-menu";
 // Components - UI

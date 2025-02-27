@@ -33,3 +33,17 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  src: url("/fonts/FamiljenGrotesk-Medium.woff2") format("woff2");
+  font-family: "Familjen Grotesk";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url("/fonts/FamiljenGrotesk-Bold.woff2") format("woff2");
+  font-family: "Familjen Grotesk";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

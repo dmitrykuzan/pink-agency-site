@@ -1,0 +1,16 @@
+.logo {
+  a {
+    svg {
+      fill: var(--clr-default-100);
+      transition: fill 0.6s;
+    }
+  }
+
+  &--pink {
+    a {
+      svg {
+        fill: var(--clr-hover-400);
+      }
+    }
+  }
+}

@@ -1,43 +1,84 @@
+import { useEffect, useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { Container } from "@components/ui";
-import { motion } from "framer-motion";
+import Link from "next/link";
 
 export const Hero = () => {
+  //video loaded
+  const [videoLoaded, setVideoLoaded] = useState(false);
+  //video loaded
+
+  //scroll anim
+  const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1100);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const y = useTransform(scrollY, [0, 300], [0, -150]);
+  const xLeft = useTransform(scrollY, [0, 300], [0, -200]);
+  const xRight = useTransform(scrollY, [0, 300], [0, 200]);
+  const opacity = useTransform(scrollY, [0, 300], [1, 0]);
+  //scroll anim
+
   // title anim
   let titleAnim = {};
-  let buttonAnim = {};
+  let leftAnim = {};
+  let rightAnim = {};
 
   if (typeof window !== "undefined") {
     const isMobile = window.innerWidth < 992;
 
     if (!isMobile) {
       titleAnim = {
-        hidden: { x: -20, opacity: 0 },
+        hidden: { x: -50, opacity: 0 },
         visible: (custom) => ({
           x: 0,
           opacity: 1,
           transition: {
             delay: custom * 0.3,
+            duration: 1,
+            ease: "easeOut",
+          },
+        }),
+      };
+
+      leftAnim = {
+        hidden: { x: -30, opacity: 0 },
+        visible: (custom) => ({
+          x: 0,
+          opacity: 1,
+          transition: {
+            delay: custom * 0.4,
             duration: 0.8,
             ease: "easeOut",
           },
         }),
       };
 
-      buttonAnim = {
-        hidden: {
-          opacity: 0,
-        },
+      rightAnim = {
+        hidden: { x: 30, opacity: 0 },
         visible: (custom) => ({
+          x: 0,
           opacity: 1,
-
           transition: {
-            delay: custom * 0.3,
+            delay: custom * 0.4,
             duration: 0.8,
+            ease: "easeOut",
           },
         }),
       };
     }
   }
+  // title anim
 
   return (
     <motion.section
@@ -47,6 +88,19 @@ export const Hero = () => {
       viewport={{ once: true }}
       suppressHydrationWarning={true}
     >
+      <div className={`hero__video-fake ${videoLoaded ? "hide" : "show"}`}>
+        <img src="img/hero/hero-fake.jpg" alt="" />
+      </div>
+      <video
+        className="hero__video"
+        autoPlay
+        loop
+        muted
+        playsInline
+        onLoadedData={() => setVideoLoaded(true)}
+      >
+        <source src="video/hero.webm" type="video/webm" />
+      </video>
       <Container>
         <div className="hero__wrapper stack">
           <div className="hero__info stack column">
@@ -55,71 +109,39 @@ export const Hero = () => {
                 className="hero__title"
                 custom={1}
                 variants={titleAnim}
+                style={{ y, opacity }}
                 suppressHydrationWarning={true}
               >
-                Empowering creators Building digital <br></br> Icons
-                transforming presence
+                Your All-Access Pass to Creative Excellence
               </motion.h1>
-              <motion.p
-                className="hero__description"
-                custom={2}
-                variants={titleAnim}
-                suppressHydrationWarning={true}
-              >
-                We help creators grow their brands, maximize revenue, and
-                protect their digital presence
-              </motion.p>
             </div>
-            <motion.a
-              href="#form"
-              className="hero__button button-pink"
-              aria-label="Go to form"
-              variants={buttonAnim}
-              custom={3}
-              suppressHydrationWarning={true}
-            >
-              <span className="hero__button-text">Apply now</span>
-              <span className="hero__button-icon">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g clipPath="url(#clip0_1_34)">
-                    <path
-                      d="M8 0H16V8H15V1.71094L0.726562 15.9766L0.0234375 15.2734L14.2891 1H8V0Z"
-                      fill="#563D41"
-                    />
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_1_34">
-                      <rect width="16" height="16" fill="white" />
-                    </clipPath>
-                  </defs>
-                </svg>
-              </span>
-            </motion.a>
-          </div>
-          <div className="hero__image">
-            <img
-              src="img/hero/hero.webp"
-              width="665"
-              height="957"
-              alt="Girl"
-              loading="eager"
-            />
-          </div>
 
-          <div className="hero__image-mobile">
-            <img
-              src="img/hero/hero-mobile.webp"
-              width="440"
-              height="794"
-              loading="eager"
-              alt="Girl"
-            />
+            <div className="hero__text-bottom stack align-center justify-space-between">
+              <motion.div
+                custom={2}
+                variants={leftAnim}
+                suppressHydrationWarning={true}
+                style={isMobile ? { y, opacity } : { x: xLeft, opacity }}
+                className="hero__link-wrapper"
+              >
+                <Link href="#services" className="hero__link-scroll">
+                  Scroll down
+                </Link>
+              </motion.div>
+
+              <motion.div
+                custom={2}
+                variants={rightAnim}
+                suppressHydrationWarning={true}
+                style={isMobile ? { y, opacity } : { x: xRight, opacity }}
+                className="hero__text-description"
+              >
+                <p>
+                  We help creators grow their brands, maximize revenue, and
+                  protect their digital presence
+                </p>
+              </motion.div>
+            </div>
           </div>
         </div>
       </Container>

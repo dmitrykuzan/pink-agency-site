@@ -46,6 +46,20 @@ const Document = () => {
           type="font/woff2"
           crossOrigin=""
         />
+        <link
+          rel="preload"
+          href="/fonts/FamiljenGrotesk-Bold.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
+        <link
+          rel="preload"
+          href="/fonts/FamiljenGrotesk-Medium.woff2"
+          as="font"
+          type="font/woff2"
+          crossOrigin=""
+        />
 
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="theme-color" content="#ffffff" />

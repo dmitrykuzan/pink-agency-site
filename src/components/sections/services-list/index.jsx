@@ -25,7 +25,7 @@ export const ServicesList = (props) => {
   }
 
   return (
-    <section className={`${className ? className : ""} services`}>
+    <section className={`${className ? className : ""} services`} id="services">
       <Container>
         <div className="services__wrapper stack column">
           <Typography
