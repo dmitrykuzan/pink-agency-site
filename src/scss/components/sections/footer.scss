@@ -1,12 +1,10 @@
 .footer {
-  padding-top: 3.5rem;
+  padding-top: 10rem;
   padding-bottom: 5.6rem;
   background-color: var(--clr-default-100);
 
   &__top {
     gap: 1rem;
-    border-bottom: 0.1rem solid var(--clr-default-400);
-    padding-bottom: 3.5rem;
 
     @media (max-width: em(1080)) {
       flex-direction: column;
@@ -143,7 +141,7 @@
   }
 
   &__form {
-    gap: 1rem;
+    gap: 2rem;
 
     &-body {
       gap: 1.6rem;
@@ -153,43 +151,18 @@
       }
     }
 
-    &-input {
-      input {
-        height: 5.6rem;
-      }
-
-      @media (max-width: em(375)) {
-        width: 100%;
-      }
-    }
-
     &-title {
       font-weight: 600;
       font-size: 1.8rem;
       line-height: 150%;
       color: var(--clr-accent-text);
     }
-  }
 
-  &__designed {
-    padding-top: 1.4rem;
-    font-family: Manrope, sans-serif;
-    text-align: center;
-    color: var(--clr-default-440);
-
-    a {
-      color: var(--clr-accent-400);
-      transition: color var(--transition);
-
-      @media (hover) {
-        &:hover {
-          color: var(--clr-hover-400);
-        }
-      }
-    }
-
-    @media (max-width: em(767)) {
-      display: none;
+    &-button {
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+      max-width: 27rem;
     }
   }
 

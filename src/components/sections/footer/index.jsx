@@ -77,23 +77,19 @@ export const Footer = () => {
               </li>
             </ul>
 
-            <form className="footer__form stack column">
+            <div className="footer__form stack column">
               <h3 className="footer__form-title">
                 Ready to transform your presence?
               </h3>
-              <div className="footer__form-body stack align-center">
-                <div className="input footer__form-input">
-                  <input placeholder="Enter your e-mail" type="email" />
-                </div>
-                <button className="button-pink" aria-label="Apply submit">
-                  Apply
-                </button>
-              </div>
-            </form>
+              <Link
+                href="/form"
+                className="footer__form-button button-pink"
+                aria-label="Apply submit"
+              >
+                Apply
+              </Link>
+            </div>
           </div>
-          <span className="footer__designed">
-            Design by <a href="#">triplexxx52</a>
-          </span>
 
           <div className="footer__policy-mobile stack align-center justify-space-between">
             <Link href="#">Terms & Conditions</Link>

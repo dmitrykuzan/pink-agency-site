@@ -1,4 +1,5 @@
 .about-us {
+  z-index: 2;
   overflow-x: clip;
   padding-top: 10rem;
 
@@ -21,9 +22,8 @@
       background-size: cover;
       background-repeat: no-repeat;
 
-      @media (max-width: em(992)) {
-        left: 21rem;
-        bottom: -25rem;
+      @media (max-width: em(1080)) {
+        display: none;
       }
     }
   }

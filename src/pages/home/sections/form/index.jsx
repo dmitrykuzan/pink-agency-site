@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Container, Typography } from "@components/ui";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export const Form = () => {
+  const [activeTab, setActiveTab] = useState("tab1");
+
   // title anim
   let titleAnim = {};
   let buttonAnim = {};
@@ -38,6 +41,18 @@ export const Form = () => {
       };
     }
   }
+
+  //fields anim
+
+  const tabContentVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3, ease: "easeIn" } },
+  };
 
   return (
     <motion.section
@@ -77,94 +92,212 @@ export const Form = () => {
                 custom={3}
                 suppressHydrationWarning={true}
               >
-                <button className="form__button active" aria-label="Models tab">
+                <button
+                  className={`${
+                    activeTab === "tab1"
+                      ? "form__button active"
+                      : "form__button"
+                  } `}
+                  aria-label="Models tab"
+                  onClick={() => setActiveTab("tab1")}
+                >
                   Models
                 </button>
-                <button className="form__button" aria-label="Brands tab">
+                <button
+                  className={`${
+                    activeTab === "tab2"
+                      ? "form__button active"
+                      : "form__button"
+                  } `}
+                  aria-label="Brands tab"
+                  onClick={() => setActiveTab("tab2")}
+                >
                   Brands
                 </button>
               </motion.div>
             </div>
 
-            <form className="form__body stack column">
-              <div className="form__body-wrapper stack column">
-                <div className="form__input stack column">
-                  <Typography
-                    tag="span"
-                    upperCase
-                    className="form__input-label"
-                    weight="600"
+            <div className="form__body-wrapper">
+              <AnimatePresence mode="wait">
+                {activeTab === "tab1" && (
+                  <motion.form
+                    key="tab1"
+                    variants={tabContentVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="form__body stack column"
                   >
-                    Full legal name
-                  </Typography>
-                  <div className="form__input-wrapper">
-                    <input placeholder="Full name" type="text" />
-                  </div>
-                </div>
+                    <div className="form__body-wrapper stack column">
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Full legal name
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="Full name" type="text" />
+                        </div>
+                      </div>
 
-                <div className="form__input stack column">
-                  <Typography
-                    tag="span"
-                    upperCase
-                    className="form__input-label"
-                    weight="600"
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          E-Mail
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="E-Mail" type="email" />
+                        </div>
+                      </div>
+
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Phone number
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="000-000-000" type="text" />
+                        </div>
+                      </div>
+
+                      <div className="form__textarea stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Links to major followings
+                        </Typography>
+                        <div className="form__textarea-wrapper">
+                          <textarea
+                            placeholder="Intagram, SnapChat, TikTok"
+                            name="form__textarea"
+                            id="form__textarea"
+                          ></textarea>
+                        </div>
+                      </div>
+
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Location
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="City, State" type="text" />
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="form__submit">APPLY</button>
+                  </motion.form>
+                )}
+
+                {activeTab === "tab2" && (
+                  <motion.form
+                    key="tab2"
+                    variants={tabContentVariant}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="form__body stack column"
                   >
-                    E-Mail
-                  </Typography>
-                  <div className="form__input-wrapper">
-                    <input placeholder="E-Mail" type="email" />
-                  </div>
-                </div>
+                    <div className="form__body-wrapper stack column">
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Name
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="Full name" type="text" />
+                        </div>
+                      </div>
 
-                <div className="form__input stack column">
-                  <Typography
-                    tag="span"
-                    upperCase
-                    className="form__input-label"
-                    weight="600"
-                  >
-                    Phone number
-                  </Typography>
-                  <div className="form__input-wrapper">
-                    <input placeholder="000-000-000" type="text" />
-                  </div>
-                </div>
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Company
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="Company" type="text" />
+                        </div>
+                      </div>
 
-                <div className="form__textarea stack column">
-                  <Typography
-                    tag="span"
-                    upperCase
-                    className="form__input-label"
-                    weight="600"
-                  >
-                    Links to major followings
-                  </Typography>
-                  <div className="form__textarea-wrapper">
-                    <textarea
-                      placeholder="Intagram, SnapChat, TikTok"
-                      name="form__textarea"
-                      id="form__textarea"
-                    ></textarea>
-                  </div>
-                </div>
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          E-Mail
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="E-Mail" type="email" />
+                        </div>
+                      </div>
 
-                <div className="form__input stack column">
-                  <Typography
-                    tag="span"
-                    upperCase
-                    className="form__input-label"
-                    weight="600"
-                  >
-                    Location
-                  </Typography>
-                  <div className="form__input-wrapper">
-                    <input placeholder="City, State" type="text" />
-                  </div>
-                </div>
-              </div>
+                      <div className="form__input stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Phone number
+                        </Typography>
+                        <div className="form__input-wrapper">
+                          <input placeholder="000-000-000" type="text" />
+                        </div>
+                      </div>
 
-              <button className="form__submit">APPLY</button>
-            </form>
+                      <div className="form__textarea stack column">
+                        <Typography
+                          tag="span"
+                          upperCase
+                          className="form__input-label"
+                          weight="600"
+                        >
+                          Message
+                        </Typography>
+                        <div className="form__textarea-wrapper">
+                          <textarea
+                            placeholder="Type your message"
+                            name="form__textarea"
+                            id="form__textarea"
+                          ></textarea>
+                        </div>
+                      </div>
+                    </div>
+
+                    <button className="form__submit">APPLY</button>
+                  </motion.form>
+                )}
+              </AnimatePresence>
+            </div>
           </div>
 
           <div className="form__image">

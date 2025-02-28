@@ -102,8 +102,9 @@
     font-weight: 600;
     font-size: fluid(10rem, 5rem);
     line-height: 122%;
-
     color: var(--clr-default-100);
+    transition: transform var(--transition) ease-out;
+    will-change: transform;
   }
 
   &__link-scroll {

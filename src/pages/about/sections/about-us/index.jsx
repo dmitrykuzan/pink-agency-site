@@ -15,10 +15,14 @@ export const AboutUs = () => {
           </Typography>
 
           <Typography className="about-us__description" center tag="p">
-            At <span>Pink Agency</span> , we specialize in helping creators
-            establish a powerful digital presence. Our goal is to turn talented
-            individuals into iconic brands by managing every aspect of their
-            journey—from content to collaborations
+            At <span>Pink Agency</span>, we specialize in transforming creators
+            into iconic brands with a powerful digital presence. Our expertise
+            lies in full-service management—handling everything from content
+            strategy and engagement growth to OnlyFans monetization and brand
+            partnerships. We help talented individuals scale their influence,
+            maximize earnings, and build a legacy in the digital space. Whether
+            you’re a rising star or an established creator, we provide the
+            tools, strategy, and support to elevate your career to new heights.
           </Typography>
         </div>
       </Container>

@@ -7,9 +7,10 @@
     position: relative;
 
     &-link {
-      font-family: Manrope, sans-serif;
-      font-size: 1.8rem;
-      color: var(--clr-default-900);
+      font-family: "Familjen Grotesk", sans-serif;
+      font-weight: 400;
+      font-size: 1.6rem;
+      color: var(--clr-default-440);
     }
 
     &::before {
@@ -19,7 +20,7 @@
       bottom: -0.4rem;
       width: 0;
       height: 0.2rem;
-      background-color: var(--clr-default-100);
+      background-color: var(--clr-default-440);
       transition: width var(--transition);
     }
 
