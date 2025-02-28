@@ -153,7 +153,22 @@
     }
 
     @media (max-width: em(1100)) {
-      max-width: initial;
+      margin-left: auto;
+      max-width: 50rem;
+    }
+
+    @media (max-width: em(767)) {
+      max-width: 35rem;
+    }
+
+    @media (max-width: em(575)) {
+      max-width: 28rem;
+    }
+  }
+
+  &__link-wrapper {
+    @media (max-width: em(1100)) {
+      margin-right: auto;
     }
   }
 }

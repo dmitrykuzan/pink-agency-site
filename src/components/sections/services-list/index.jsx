@@ -30,7 +30,6 @@ export const ServicesList = (props) => {
 
   const THRESHOLD = 10;
 
-  // Проверка на предпочтение уменьшения движения
   useEffect(() => {
     const motionMatchMedia = window.matchMedia("(prefers-reduced-motion)");
     setIsReducedMotion(motionMatchMedia.matches);
@@ -64,7 +63,7 @@ export const ServicesList = (props) => {
   };
 
   if (isReducedMotion) return null;
-  // Возвращаем null, е
+  //hover
 
   return (
     <section className={`${className ? className : ""} services`} id="services">

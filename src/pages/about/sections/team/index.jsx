@@ -45,8 +45,8 @@ export const Team = () => {
           style={isMobile ? {} : { scale }}
           className="team__item stack column justify-space-between"
         >
-          <h3>Leave a request and we will contact you</h3>
-          <Link href="/form">Join Us</Link>
+          <h3>Follow Us On Our Main Social Media Instagram.</h3>
+          <Link href="/form">Follow Now</Link>
         </motion.div>
       </div>
     </section>

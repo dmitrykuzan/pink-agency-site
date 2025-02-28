@@ -1,0 +1,98 @@
+.approach {
+  padding-top: 10rem;
+
+  &__wrapper {
+    gap: 9rem;
+
+    @media (max-width: em(1023)) {
+      gap: 5rem;
+    }
+
+    @media (max-width: em(767)) {
+      gap: 4rem;
+    }
+  }
+
+  &__title {
+    font-family: "Familjen Grotesk", sans-serif;
+    font-size: fluid(8rem, 3.8rem);
+    color: var(--clr-default-450);
+  }
+
+  &__item {
+    gap: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    min-height: 29rem;
+
+    &-count {
+      font-family: "Familjen Grotesk", sans-serif;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--clr-default-900);
+
+      @media (max-width: em(880)) {
+        display: none;
+      }
+    }
+
+    &-title {
+      margin-left: 10rem;
+      width: 100%;
+      max-width: 35rem;
+      font-family: "Familjen Grotesk", sans-serif;
+      font-size: fluid(2.5rem, 2rem);
+      text-align: start;
+      color: var(--clr-default-450);
+
+      @media (max-width: em(1023)) {
+        margin-left: 6rem;
+      }
+
+      @media (max-width: em(880)) {
+        margin-left: initial;
+        width: initial;
+
+        max-width: initial;
+      }
+    }
+
+    &-description {
+      max-width: 55rem;
+
+      p {
+        font-family: "Familjen Grotesk", sans-serif;
+        font-size: fluid(2.5rem, 1.6rem);
+        line-height: 133%;
+        color: var(--clr-default-420);
+      }
+    }
+
+    &:last-child {
+      min-height: initial;
+    }
+
+    &:first-child {
+      border-top: 0.1rem solid var(--clr-default-450);
+    }
+
+    &:not(:last-child) {
+      border-bottom: 0.1rem solid var(--clr-default-450);
+    }
+
+    @media (max-width: em(1023)) {
+      min-height: 25rem;
+    }
+
+    @media (max-width: em(880)) {
+      flex-direction: column;
+      min-height: 20rem;
+    }
+
+    @media (max-width: em(575)) {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      min-height: 15rem;
+    }
+  }
+}

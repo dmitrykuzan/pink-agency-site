@@ -1,34 +1,62 @@
 import Link from "next/link";
-import { useTranslation } from "@hooks";
-import { MENU } from "@utils";
 import { useRouter } from "next/router";
 
 export const Menu = (props) => {
   const { className, onClose } = props;
-
-  const t = useTranslation();
 
   const router = useRouter();
 
   return (
     <nav className={`${className ? className : ""} menu`}>
       <ul className="menu__list stack align-center">
-        {Object.entries(MENU).map(([key, value]) => (
-          <li
-            key={key}
-            className={`menu__item ${
-              router.pathname === value ? "active" : ""
-            }`}
+        <li className={`menu__item ${router.pathname === "/" ? "active" : ""}`}>
+          <Link
+            className={`menu__item-link stack center `}
+            href="/"
+            onClick={onClose}
           >
-            <Link
-              className={`menu__item-link stack center `}
-              href={value}
-              onClick={onClose}
-            >
-              {t.navigation[key]}
-            </Link>
-          </li>
-        ))}
+            Home
+          </Link>
+        </li>
+        <li
+          className={`menu__item ${
+            router.pathname === "/about" ? "active" : ""
+          }`}
+        >
+          <Link
+            className={`menu__item-link stack center `}
+            href="/about"
+            onClick={onClose}
+          >
+            About Us
+          </Link>
+        </li>
+        <li
+          className={`menu__item ${
+            router.pathname === "/services" ? "active" : ""
+          }`}
+        >
+          <Link
+            className={`menu__item-link stack center `}
+            href="/services"
+            onClick={onClose}
+          >
+            Services
+          </Link>
+        </li>
+        <li
+          className={`menu__item ${
+            router.pathname === "/contact" ? "active" : ""
+          }`}
+        >
+          <Link
+            className={`menu__item-link stack center `}
+            href="/contact"
+            onClick={onClose}
+          >
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );
