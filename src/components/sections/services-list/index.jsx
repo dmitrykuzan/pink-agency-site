@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Container, Typography } from "@components/ui";
 import { motion } from "framer-motion";
+import { Container, Typography } from "@components/ui";
 
 export const ServicesList = (props) => {
   const { className } = props;

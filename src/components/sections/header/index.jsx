@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import { Burger, BurgerMenu, Container, Logo, Menu } from "@components/ui";
+import { Burger, BurgerMenu, Container, Menu } from "@components/ui";
 import Link from "next/link";
 
 export const Header = () => {
