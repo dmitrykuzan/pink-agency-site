@@ -16,10 +16,31 @@
 
   &__subtitle {
     margin-left: auto;
-    max-width: 86rem;
+    max-width: 80rem;
     font-family: "Familjen Grotesk", sans-serif;
-    font-size: fluid(4.8rem, 3.6rem);
+    font-size: fluid(4.8rem, 2.2rem);
+    letter-spacing: -2px;
     color: var(--clr-default-440);
+
+    @media (max-width: em(1160)) {
+      max-width: 72rem;
+    }
+
+    @media (max-width: em(1160)) {
+      max-width: 72rem;
+    }
+
+    @media (max-width: em(992)) {
+      max-width: 68rem;
+    }
+
+    @media (max-width: em(767)) {
+      max-width: 45rem;
+    }
+
+    @media (max-width: em(575)) {
+      max-width: 25rem;
+    }
   }
 
   &__list {
@@ -176,10 +197,10 @@
 
     .services__title {
       text-align: start;
-
-      @media (max-width: em(767)) {
-        text-align: center;
-      }
     }
+  }
+
+  @media (max-width: em(767)) {
+    padding-top: 10rem;
   }
 }
