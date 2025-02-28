@@ -70,15 +70,13 @@ export const ServicesList = (props) => {
     <section className={`${className ? className : ""} services`} id="services">
       <Container>
         <div className="services__wrapper stack column">
-          {className === "home-services" ? (
-            <Typography tag="h2" className="services__subtitle" weight="500">
-              We offer Personalized management and marketing solutions for
-              growing creators.
-            </Typography>
-          ) : null}
+          <Typography tag="h2" className="services__subtitle" weight="500">
+            We offer Personalized management and marketing solutions for growing
+            creators.
+          </Typography>
           <Typography
             tag={`${className && className === "home-services" ? "h2" : "h1"}`}
-            className="services__title typography h1"
+            className="services__title typography"
             weight="500"
           >
             Services
