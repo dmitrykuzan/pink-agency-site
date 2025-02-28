@@ -128,7 +128,11 @@ export const Header = () => {
               >
                 Apply
               </Link>
-              <Burger openMenu={openMenu} isMenuOpen={isMenuOpen} />
+              <Burger
+                isSticky={isSticky}
+                openMenu={openMenu}
+                isMenuOpen={isMenuOpen}
+              />
             </div>
           </div>
         </Container>

@@ -14,6 +14,22 @@
     height: $height;
     background-color: transparent;
 
+    &.home-burger {
+      &::after,
+      &::before,
+      span {
+        background-color: var(--clr-default-100);
+      }
+
+      &.fixed {
+        &::after,
+        &::before,
+        span {
+          background-color: var(--clr-accent-400);
+        }
+      }
+    }
+
     &::after,
     &::before,
     span {
@@ -24,6 +40,7 @@
       width: 100%;
       height: $burgerLineHeight;
       background-color: $bgColor;
+      transition: background-color var(--transition);
     }
 
     &::before {
