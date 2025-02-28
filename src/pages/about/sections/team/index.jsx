@@ -46,7 +46,7 @@ export const Team = () => {
           className="team__item stack column justify-space-between"
         >
           <h3>Leave a request and we will contact you</h3>
-          <Link href="/contact">Contact</Link>
+          <Link href="/form">Join Us</Link>
         </motion.div>
       </div>
     </section>

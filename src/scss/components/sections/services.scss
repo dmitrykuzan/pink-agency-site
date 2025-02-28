@@ -27,30 +27,27 @@
     gap: 3rem;
     grid-template-columns: repeat(4, 1fr);
 
-    &::before {
+    &::before,
+    &::after {
       content: "";
       position: absolute;
-      left: 89rem;
-      bottom: -8rem;
       z-index: -1;
       width: 55.5rem;
       height: 28.8rem;
-      background-image: url("/img/hero/hero-decor-1.svg");
       background-size: cover;
       background-repeat: no-repeat;
     }
 
+    &::before {
+      left: 89rem;
+      bottom: -8rem;
+      background-image: url("/img/hero/hero-decor-1.svg");
+    }
+
     &::after {
-      content: "";
-      position: absolute;
       left: -19rem;
       top: 0;
-      z-index: -1;
-      width: 55.5rem;
-      height: 28.8rem;
       background-image: url(/img/hero/hero-decor-1.svg);
-      background-size: cover;
-      background-repeat: no-repeat;
     }
 
     @media (max-width: em(1360)) {
@@ -67,14 +64,10 @@
     }
   }
 
-  &__hover-wrapper {
-    perspective: 1001px;
-  }
-
   &__item {
     position: relative;
+    z-index: 1;
     gap: 2.8rem;
-    overflow: hidden;
     border-radius: 0.5rem;
     padding-top: 4.6rem;
     padding-right: 2.3rem;
@@ -82,9 +75,7 @@
     padding-left: 2.3rem;
     height: 100%;
     box-shadow: 0 10px 51px rgba(0, 0, 0, 0.1), 0 4px 19px rgba(0, 0, 0, 0.2);
-
     background-color: var(--clr-default-100);
-    transform-style: preserve-3d;
     transition: box-shadow 0.4s ease-in-out;
     will-change: transform;
     cursor: pointer;
@@ -93,7 +84,6 @@
       display: block;
       width: 7.6rem;
       height: 7.6rem;
-      transform: translateZ(12px);
       transition: transform 0.4s ease-in-out;
     }
 
@@ -101,7 +91,6 @@
       position: relative;
       z-index: 1;
       gap: 1.5rem;
-      transform: translateZ(12px);
     }
 
     &-title {
@@ -109,7 +98,6 @@
       font-size: 2rem;
       line-height: 150%;
       color: var(--clr-accent-text);
-      transform: translateZ(2rem);
     }
 
     &-description {
@@ -167,7 +155,6 @@
     @media (hover) {
       &:hover {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-        filter: brightness(1.1);
 
         .services__item-icon {
           transform: scale(1.1);

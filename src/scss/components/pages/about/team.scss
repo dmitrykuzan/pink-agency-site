@@ -85,7 +85,8 @@
     backdrop-filter: blur(3px);
 
     &:first-child {
-      background-color: rgba(38, 38, 38, 0.5);
+      // background-color: rgba(38, 38, 38, 0.5);
+      background-color: rgb(99, 83, 77, 0.7);
 
       @media (max-width: em(1080)) {
         background-color: var(--clr-default-450);
@@ -96,10 +97,10 @@
       background-color: rgb(247 247 247 / 50%);
       h3,
       a {
-        color: var(--clr-default-900);
+        color: var(--clr-accent-text);
 
         &::before {
-          background-color: var(--clr-default-900);
+          background-color: var(--clr-accent-text);
         }
       }
     }

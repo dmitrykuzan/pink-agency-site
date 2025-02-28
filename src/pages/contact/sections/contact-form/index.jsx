@@ -6,7 +6,7 @@ export const ContactForm = () => {
       <Container>
         <div className="contact-form__wrapper stack justify-space-between">
           <div className="contact-form__info stack column">
-            <Typography className="contact-form__title" weight="500" tag="h1">
+            <Typography className="contact-form__title" weight="600" tag="h1">
               Contact
             </Typography>
 
@@ -140,7 +140,7 @@ export const ContactForm = () => {
                 <li className="contact-form__social">
                   <a
                     className="contact-form__social-icon stack center"
-                    href="#"
+                    href="https://www.instagram.com/managedbypink/"
                     aria-label="Go to Instagram"
                   >
                     <svg

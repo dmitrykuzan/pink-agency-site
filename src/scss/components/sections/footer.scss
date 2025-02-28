@@ -1,7 +1,15 @@
 .footer {
   padding-top: 10rem;
-  padding-bottom: 5.6rem;
+  padding-bottom: 3rem;
   background-color: var(--clr-default-100);
+
+  &__wrapper {
+    gap: 3rem;
+
+    @media (max-width: em(767)) {
+      gap: 2rem;
+    }
+  }
 
   &__top {
     gap: 1rem;
@@ -53,7 +61,6 @@
 
       @media (max-width: em(375)) {
         flex-direction: column;
-        align-items: center;
         gap: 0.7rem;
       }
     }
@@ -81,6 +88,10 @@
       @media (max-width: em(767)) {
         display: flex;
         padding-top: 1rem;
+
+        a {
+          font-size: 1.4rem;
+        }
       }
     }
 
@@ -155,6 +166,7 @@
       font-weight: 600;
       font-size: 1.8rem;
       line-height: 150%;
+      text-align: center;
       color: var(--clr-accent-text);
     }
 
@@ -166,8 +178,14 @@
     }
   }
 
+  &__copyright {
+    font-family: Manrope, sans-serif;
+    font-size: 1.2rem;
+    line-height: 133%;
+  }
+
   @media (max-width: em(1080)) {
     padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding-bottom: 2rem;
   }
 }

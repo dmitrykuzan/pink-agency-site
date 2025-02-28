@@ -15,15 +15,16 @@
 
   &.h1 {
     font-family: "Familjen Grotesk", sans-serif;
-    font-size: 4.8rem;
+    font-size: fluid(4.8rem, 3.8rem);
     line-height: 150%;
-    color: var(--clr-default-440);
+    color: var(--clr-default-450);
   }
 
   &.h2 {
     font-family: "Familjen Grotesk", sans-serif;
     font-size: fluid(4rem, 3rem);
     line-height: 115%;
+    color: var(--clr-default-450);
   }
 
   &.h3 {

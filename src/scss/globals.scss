@@ -36,11 +36,11 @@ $containerWidth: 123rem;
   --clr-default-500: rgba(0, 0, 0, 0.25);
   --clr-default-900: #000000;
 
-  --clr-accent-400: #ffbfcb;
+  --clr-accent-400: #ffa9b9;
   --clr-accent-500: #fff2f4;
   --clr-accent-text: #563d41;
 
-  --clr-hover-400: #ffa4b5;
+  --clr-hover-400: #ffbfcb;
   --clr-hover-500: #ff5c7a;
   --clr-hover-600: #6b5256;
   --clr-hover-700: #fce2e6;
@@ -58,7 +58,6 @@ $containerWidth: 123rem;
 body {
   font-size: 1.6rem;
   color: var(--clr-default-420);
-  // background-color: var(--clr-default-200);
   background-color: var(--clr-default-100);
 
   &.lock {
@@ -162,6 +161,7 @@ main {
 // Components - Sections
 @import "./components/sections/header";
 @import "./components/sections/services";
+@import "./components/sections/policy";
 @import "./components/sections/footer";
 // Components - Sections
 

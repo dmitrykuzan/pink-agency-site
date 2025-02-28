@@ -25,15 +25,15 @@ export const Footer = () => {
             <Menu className="footer__menu" />
 
             <div className="footer__policy stack">
-              <Link href="#">Terms & Conditions</Link>
-              <Link href="#">Privacy Policy</Link>
+              <Link href="/terms">Terms & Conditions</Link>
+              <Link href="/policy">Privacy Policy</Link>
             </div>
 
             <ul className="footer__socials stack align-center">
               <li className="footer__social">
                 <a
                   className="stack center"
-                  href="#"
+                  href="https://x.com/managedbypink"
                   aria-label="Social icon link"
                 >
                   <svg
@@ -50,7 +50,7 @@ export const Footer = () => {
               <li className="footer__social">
                 <a
                   className="stack center"
-                  href="#"
+                  href="https://www.instagram.com/managedbypink/"
                   aria-label="Social icon link"
                 >
                   <svg
@@ -92,8 +92,14 @@ export const Footer = () => {
           </div>
 
           <div className="footer__policy-mobile stack align-center justify-space-between">
-            <Link href="#">Terms & Conditions</Link>
-            <Link href="#">Privacy Policy</Link>
+            <Link href="/terms">Terms & Conditions</Link>
+            <Link href="/policy">Privacy Policy</Link>
+          </div>
+
+          <div className="footer__bottom">
+            <Typography className="footer__copyright" tag="p" center>
+              © 2025 Pink Agency
+            </Typography>
           </div>
         </div>
       </Container>

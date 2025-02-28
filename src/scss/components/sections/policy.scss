@@ -1,0 +1,23 @@
+.policy {
+  padding-top: 10rem;
+  padding-bottom: 5rem;
+
+  &__wrapper {
+    gap: 3rem;
+  }
+
+  &__top {
+    gap: 2rem;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 60rem;
+  }
+
+  &__body {
+    gap: 2.5rem;
+  }
+
+  &__text {
+    gap: 1.5rem;
+  }
+}
