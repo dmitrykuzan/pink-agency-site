@@ -121,13 +121,13 @@ export const Header = () => {
 
             <div className="header__navigation stack align-center">
               <Menu className="header__menu" />
-              <a
+              <Link
                 href="/form"
                 className="header__button button-pink"
                 aria-label="Go to form"
               >
                 Apply
-              </a>
+              </Link>
               <Burger openMenu={openMenu} isMenuOpen={isMenuOpen} />
             </div>
           </div>
