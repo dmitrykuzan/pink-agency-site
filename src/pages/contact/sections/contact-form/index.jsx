@@ -63,8 +63,9 @@ export const ContactForm = () => {
                 <li className="contact-form__social">
                   <a
                     className="contact-form__social-icon stack center"
-                    href="#"
+                    href="https://x.com/managedbypink"
                     aria-label="Go to LinkedIn"
+                    target="_blank"
                   >
                     <svg
                       width="31"
@@ -83,6 +84,7 @@ export const ContactForm = () => {
                     className="contact-form__social-icon stack center"
                     href="https://www.instagram.com/managedbypink/"
                     aria-label="Go to Instagram"
+                    target="_blank"
                   >
                     <svg
                       width="33"

@@ -45,7 +45,13 @@ export const Team = () => {
           className="team__item stack column justify-space-between"
         >
           <h3>Follow Us On Our Main Social Media Instagram.</h3>
-          <Link href="/form">Follow Now</Link>
+          <a
+            href="https://www.instagram.com/managedbypink/"
+            target="_blank"
+            aria-label="Social icon link"
+          >
+            Follow Now
+          </a>
         </motion.div>
       </div>
     </section>

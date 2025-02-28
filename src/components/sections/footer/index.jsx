@@ -35,6 +35,7 @@ export const Footer = () => {
                   className="stack center"
                   href="https://x.com/managedbypink"
                   aria-label="Social icon link"
+                  target="_blank"
                 >
                   <svg
                     width="31"
@@ -50,6 +51,7 @@ export const Footer = () => {
               <li className="footer__social">
                 <a
                   className="stack center"
+                  target="_blank"
                   href="https://www.instagram.com/managedbypink/"
                   aria-label="Social icon link"
                 >
