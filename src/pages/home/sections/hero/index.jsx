@@ -93,6 +93,7 @@ export const Hero = () => {
       </div>
       <video
         className="hero__video"
+        key={videoLoaded}
         autoPlay
         loop
         muted
