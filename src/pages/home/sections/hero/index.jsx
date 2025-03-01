@@ -97,6 +97,7 @@ export const Hero = () => {
         loop
         muted
         playsInline
+        preload="auto"
         onLoadedData={() => setVideoLoaded(true)}
       >
         <source src="video/hero.webm" type="video/webm" />
