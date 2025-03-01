@@ -1,6 +1,11 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Container, Typography } from "@components/ui";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 
 export const Form = () => {
   const [activeTab, setActiveTab] = useState("tab1");
@@ -54,8 +59,34 @@ export const Form = () => {
     exit: { opacity: 0, y: -20, transition: { duration: 0.3, ease: "easeIn" } },
   };
 
+  //image anim
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1080);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  //anim
+  const ref = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end end"],
+  });
+
+  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 1]);
+
   return (
     <motion.section
+      ref={ref}
       className="form"
       id="form"
       initial="hidden"
@@ -300,15 +331,15 @@ export const Form = () => {
             </div>
           </div>
 
-          <div className="form__image">
+          <motion.div style={isMobile ? {} : { scale }} className="form__image">
             <img
-              src="img/form/form.webp"
-              width="762"
-              height="1084"
+              src="img/form/form.jpg"
+              width="600"
+              height="800"
               loading="lazy"
-              alt="Girl"
+              alt="Three on Desert"
             />
-          </div>
+          </motion.div>
         </div>
       </Container>
     </motion.section>
